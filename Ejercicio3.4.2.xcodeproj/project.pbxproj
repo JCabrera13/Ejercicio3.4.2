@@ -13,6 +13,12 @@
 		55B4F91627FD3BA7009CC239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B4F91427FD3BA7009CC239 /* Main.storyboard */; };
 		55B4F91827FD3BAA009CC239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B4F91727FD3BAA009CC239 /* Assets.xcassets */; };
 		55B4F91B27FD3BAA009CC239 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B4F91927FD3BAA009CC239 /* LaunchScreen.storyboard */; };
+		55B4F92327FD3BFE009CC239 /* Figura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B4F92227FD3BFE009CC239 /* Figura.swift */; };
+		55B4F92527FD4543009CC239 /* Circulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B4F92427FD4543009CC239 /* Circulo.swift */; };
+		55B4F92727FD4586009CC239 /* Triangulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B4F92627FD4586009CC239 /* Triangulo.swift */; };
+		55B4F92927FD45C5009CC239 /* Cuadrado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B4F92827FD45C5009CC239 /* Cuadrado.swift */; };
+		55B4F92B27FD467E009CC239 /* Rectangulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B4F92A27FD467E009CC239 /* Rectangulo.swift */; };
+		55B4F92D27FD46D0009CC239 /* Trapecio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B4F92C27FD46D0009CC239 /* Trapecio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		55B4F91727FD3BAA009CC239 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55B4F91A27FD3BAA009CC239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55B4F91C27FD3BAA009CC239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55B4F92227FD3BFE009CC239 /* Figura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figura.swift; sourceTree = "<group>"; };
+		55B4F92427FD4543009CC239 /* Circulo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circulo.swift; sourceTree = "<group>"; };
+		55B4F92627FD4586009CC239 /* Triangulo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangulo.swift; sourceTree = "<group>"; };
+		55B4F92827FD45C5009CC239 /* Cuadrado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuadrado.swift; sourceTree = "<group>"; };
+		55B4F92A27FD467E009CC239 /* Rectangulo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangulo.swift; sourceTree = "<group>"; };
+		55B4F92C27FD46D0009CC239 /* Trapecio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trapecio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,12 @@
 				55B4F91727FD3BAA009CC239 /* Assets.xcassets */,
 				55B4F91927FD3BAA009CC239 /* LaunchScreen.storyboard */,
 				55B4F91C27FD3BAA009CC239 /* Info.plist */,
+				55B4F92227FD3BFE009CC239 /* Figura.swift */,
+				55B4F92C27FD46D0009CC239 /* Trapecio.swift */,
+				55B4F92A27FD467E009CC239 /* Rectangulo.swift */,
+				55B4F92427FD4543009CC239 /* Circulo.swift */,
+				55B4F92627FD4586009CC239 /* Triangulo.swift */,
+				55B4F92827FD45C5009CC239 /* Cuadrado.swift */,
 			);
 			path = Ejercicio3.4.2;
 			sourceTree = "<group>";
@@ -139,8 +157,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				55B4F91327FD3BA7009CC239 /* ViewController.swift in Sources */,
+				55B4F92327FD3BFE009CC239 /* Figura.swift in Sources */,
+				55B4F92D27FD46D0009CC239 /* Trapecio.swift in Sources */,
 				55B4F90F27FD3BA7009CC239 /* AppDelegate.swift in Sources */,
+				55B4F92527FD4543009CC239 /* Circulo.swift in Sources */,
 				55B4F91127FD3BA7009CC239 /* SceneDelegate.swift in Sources */,
+				55B4F92727FD4586009CC239 /* Triangulo.swift in Sources */,
+				55B4F92927FD45C5009CC239 /* Cuadrado.swift in Sources */,
+				55B4F92B27FD467E009CC239 /* Rectangulo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
