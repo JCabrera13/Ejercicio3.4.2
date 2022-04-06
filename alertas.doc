@@ -1,0 +1,42 @@
+Un control mas, el cual sera: toolbar 
+es como un menu de opciones
+
+el toolbar contiene el UIButton
+por default trae un boton el cual no se puede quitar. 
+
+el bar butto item solamente se puede colocar en un toolbar
+existen dos espaciadores que solamente aplican en los toolbar.
+fixed space bar button item --> longitud que va a tener, y sera fijo y se dara que longitud se quiere tener
+flexible space bar button item --> en automatico calcula que espaciado debe de tener.
+
+Existen dos tipos de alert controles (estilos principales), se tiene una variante, en total seran 3 tipos.
+
+Alert controller -> default (tiene una variante mas)
+                -> ActionSheet
+
+tipo de botones: .destructive -> solo cambia el color de los botones y las letras del boton.
+                .default -> estilo normal que trae predefinido iOS
+                .cancel -> aparece el color azul, y las letras vienen remarcadas (bold)
+
+//si se usa de esta forma, se puede poner action in en diferencia de _ in
+
+        let btnNo = UIAlertAction(title: "No", style: .cancel, handler:
+        {
+            action in self.lblResultado.text = "Presiono el boton no"
+        })
+
+        poner _ in significa no utilizar dentro de este contexto al propio objeto.
+        ponerle un nombre como esta en : 
+        
+        let btnIndefinido = UIAlertAction(title: "indefinido", style: .default){
+            (accion:UIAlertAction) in self.lblResultado.text = "Presiono el boton \(accion.title!)"
+        }
+        quiere decir que nos interesa utilizar el propio objeto.
+
+Una cosa es instanciarlos y construirlos y otra cosa es agregarlos.
+
+        //codigo que hace para que se desplegue (self proviene de ViewController)
+        self.present(alerta, animated: true, completion: nil)
+
+jose angel cabrera morales.                                                     5 de abril del 2022.
+ 
