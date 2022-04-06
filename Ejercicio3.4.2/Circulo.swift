@@ -7,16 +7,12 @@
 
 import Foundation
 
-public class Circulo:Figura{
+ class Circulo:Figura{
     //propiedades del circulo para poder sacar su area, perimetro y volumen.
     //pi, radio
     //formula:pi*radio(^2)
     var radio:Double!
     var pi:Double!
-    
-    var dblRadio:Double{
-        get{return dblRadio}
-    }
     
     var dblPi: Double {
         get {
@@ -25,11 +21,20 @@ public class Circulo:Figura{
     }
     
     //constructor para calcular el area
-    override init(){
-        self.radio = dblRadio;
+     required init(_ Pi:Double, _ Radio:Double){
+        self.radio = Radio ;
         self.pi = dblPi;
     }
-    
+     //constructor para calcular el perimetro
+     required init (_ Radio:Double){
+         self.radio = Radio
+     }
+     
+     //constructor para calcular el volumne
+     required init()
+     {
+         
+     }
     
     //constructor para inicializar propiedades para calcular el perimetro.
     
@@ -44,16 +49,19 @@ public class Circulo:Figura{
     } */
     //metodos sobreescritos provenientes de Figura.
     //pi*radio^2
-    public override func calcularArea() -> Double {
-        
+    func calcularArea() -> Double {
+        let calcularAreaCirculo = self.pi*pow(2.0,self.dblPi);
+        return calcularAreaCirculo;
     }
     //2Pi*radio
-    public override func calcularPerimetro() -> Double {
-        <#code#>
+    func calcularPerimetro() -> Double {
+        let perimetro = (2*self.dblPi)*self.radio
+        return perimetro;
     }
     //
-    public override func calcularVolumen() -> Double {
-        <#code#>
+    func calcularVolumen() -> Double {
+        let perimetro = (2*self.dblPi)*self.radio
+        return perimetro;
     }
     
 }

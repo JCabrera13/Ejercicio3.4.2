@@ -7,25 +7,29 @@
 
 import Foundation
 
-public class Cuadrado:Figura{
+class Cuadrado:Figura{
     //propiedades del circulo para poder sacar su area, perimetro y volumen.
     //lado^2
     var lado:Double!
     
     //constructor
-    public override init(){
-        super.init()
+     required init(){
+        
     }
     //lado^2
-    public override func calcularArea() -> Double {
-        <#code#>
+     func calcularArea() -> Double {
+        let calcularAreaCuadrado = pow(2,self.lado);
+        return calcularAreaCuadrado;
     }
     //4*lado
-    public override func calcularPerimetro() -> Double {
-        <#code#>
+    func calcularPerimetro() -> Double {
+        let calcularAreaCuadrado = pow(2,self.lado);
+        return calcularAreaCuadrado;
+
     }
-    public override func calcularVolumen() -> Double {
-        <#code#>
+    func calcularVolumen() -> Double {
+        let calcularAreaCuadrado = pow(2,self.lado);
+        return calcularAreaCuadrado;
     }
     
 }

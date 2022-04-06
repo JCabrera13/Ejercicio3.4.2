@@ -19,19 +19,33 @@ public class Triangulo:Figura{
     var lado3:Double!
     
     //constructor
-    public override init(){
-        super.init()
+    required init(_ Base:Double, _ Altura:Double){
+        self.altura = Altura;
+        self.base = Base;
+    }
+    
+    required init(_ Lado1:Double, _ Lado2:Double, _ Lado3:Double){
+        self.lado1 = Lado1
+        self.lado2 = Lado2
+        self.lado3 = Lado3
+    }
+    //volumne dejar pendiente.
+    required init(){
+        
     }
     //base x altura /2
-    public override func calcularArea() -> Double {
-        <#code#>
+    func calcularArea() -> Double {
+        let resultadoArea = (self.base * self.altura)/2
+        return resultadoArea;
     }
     //lado1+lado2+lado3
-    public override func calcularPerimetro() -> Double {
-        <#code#>
+    func calcularPerimetro() -> Double {
+        let resultadoPerimetro = self.lado1 + self.lado2 + self.lado3;
+        return resultadoPerimetro;
     }
-    public override func calcularVolumen() -> Double {
-        <#code#>
+    func calcularVolumen() -> Double {
+        let resultadoPerimetro = self.lado1 + self.lado2 + self.lado3;
+        return resultadoPerimetro;
     }
     
 }

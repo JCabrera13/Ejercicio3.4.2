@@ -38,5 +38,8 @@ Una cosa es instanciarlos y construirlos y otra cosa es agregarlos.
         //codigo que hace para que se desplegue (self proviene de ViewController)
         self.present(alerta, animated: true, completion: nil)
 
+Los lambdas en swift equivalen a los closure.
+    dentro del closure se va a revisar que es lo que hara dicho closure, y si se interesa con el objeto 
+
 jose angel cabrera morales.                                                     5 de abril del 2022.
  

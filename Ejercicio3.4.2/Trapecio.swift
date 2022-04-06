@@ -6,7 +6,11 @@
 //
 
 import Foundation
-public class Trapecio:Figura{
+class Trapecio:Figura{
+    required init() {
+    
+    }
+    
     //propiedades del trapecio para poder sacar su area, perimetro y volumen.
     var baseMayor:Double!
     var baseMenor:Double!
@@ -16,23 +20,29 @@ public class Trapecio:Figura{
     var lado1:Double!
     var lado2:Double!
     var lado3:Double!
-    var lado4:Double
+    var lado4:Double!
     
     //constructor
-    public override init(){
-        super.init()
+    required init(_ BaseMayor:Double) {
+        self.baseMayor = BaseMayor;
     }
+    
     //(BaseMayor+BaseMenos/2) * altura
 
-    public override func calcularArea() -> Double {
-        <#code#>
+    func calcularArea() -> Double {
+        let calcularAreaTrapecio = self.baseMayor + self.baseMenor;
+        return calcularAreaTrapecio;
     }
     //lado1+lado2+lado3+lado4
-    public override func calcularPerimetro() -> Double {
-        <#code#>
+    func calcularPerimetro() -> Double {
+        let calcularAreaTrapecio = self.baseMayor + self.baseMenor;
+        return calcularAreaTrapecio;
+        
     }
-    public override func calcularVolumen() -> Double {
-        <#code#>
+    func calcularVolumen() -> Double {
+        let calcularAreaTrapecio = self.baseMayor + self.baseMenor;
+        return calcularAreaTrapecio;
+        
     }
     
 }

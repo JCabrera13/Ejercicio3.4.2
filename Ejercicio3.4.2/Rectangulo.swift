@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Rectangulo:Figura{
+class Rectangulo:Figura{
     //propiedades del circulo para poder sacar su area, perimetro y volumen.
     //base y altura
     //formula: base * altura
@@ -15,17 +15,21 @@ public class Rectangulo:Figura{
     var altura:Double!
     
     //constructor
-    public override init(){
-        super.init()
+    required init(){
+        
     }
-    public override func calcularArea() -> Double {
-        <#code#>
+    
+    func calcularArea() -> Double {
+    let calcularAreaRectangulo = self.base * self.altura
+        return calcularAreaRectangulo;
     }
-    public override func calcularPerimetro() -> Double {
-        <#code#>
+    func calcularPerimetro() -> Double {
+        let calcularAreaRectangulo = self.base * self.altura
+            return calcularAreaRectangulo;
     }
-    public override func calcularVolumen() -> Double {
-        <#code#>
+    func calcularVolumen() -> Double {
+    let calcularAreaRectangulo = self.base * self.altura
+        return calcularAreaRectangulo;
     }
     
 }
