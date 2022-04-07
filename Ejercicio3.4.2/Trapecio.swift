@@ -14,31 +14,29 @@ class Trapecio:Figura{
     
     //perimetro
     var lado1:Double!
-    var lado2:Double!
 
     //volumen
     var largo:Double!
     
     //constructor area
-    required init(_ BaseMayor:Double,_ BaseMenor:Double, _ Altura:Double) {
+    required init(BaseMayor:Double,BaseMenor:Double, Altura:Double) {
         self.baseMayor = BaseMayor;
         self.baseMenor = BaseMenor;
         self.altura=Altura;
     }
 
-    required init(_ baseMayorPerimetro:Double,_ baseMenorPerimetro:Double,
-    _ Lado1:Double,_ Lado2:Double ){
-        self.lado1 = Lado1
-        self.lado2 = Lado2
+    required init(baseMayorPerimetro:Double, baseMenorPerimetro:Double,Lado1:Double){
         self.baseMayor = baseMayorPerimetro
         self.baseMenor = baseMenorPerimetro
+        self.lado1 = Lado1
     }
+    
     //constructor para volumen
-       required init(_ BaseMayorV:Double,_ BaseMenorV:Double, _ AlturaV:Double, _ LargoV:Double) {
+    required init(BaseMayorV:Double,BaseMenorV:Double,AlturaV:Double,LargoV:Double) {
         self.baseMayor = BaseMayorV;
         self.baseMenor = BaseMenorV;
-        self.altura=AlturaV;
-        self.largo= LargoV
+        self.altura = AlturaV;
+        self.largo = LargoV
     }
 
     
@@ -50,7 +48,7 @@ class Trapecio:Figura{
     }
     //lado1+lado2+lado3+lado4
     func calcularPerimetro() -> Double {
-        let perimetroTrapecio = self.lado1 + self.lado2 +self.baseMayor + self.baseMenor;
+        let perimetroTrapecio = (self.lado1 * 2) + self.baseMayor + self.baseMenor;
         return perimetroTrapecio;
         
     }

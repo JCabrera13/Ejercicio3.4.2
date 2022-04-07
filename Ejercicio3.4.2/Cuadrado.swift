@@ -13,11 +13,11 @@ class Cuadrado:Figura{
     var lado:Double!
     var alturaVolumen:Double!
     //constructor perimetro
-    required init(_ ladoPerimetro:Double){
+    required init(ladoPerimetro:Double){
         self.lado=ladoPerimetro;
     }
     //constructor area
-    required init(_ ladoArea:Double){
+    required init(ladoArea:Double){
         self.lado = ladoArea
     }
     //falta constructor para inicializar propiedades de volumen
@@ -38,6 +38,6 @@ class Cuadrado:Figura{
     func calcularVolumen() -> Double {
         let baseVolumenCuadrado = pow(self.lado,2)
         let volumenCuadrado = self.alturaVolumen * baseVolumenCuadrado
-        return volumenCuadradp;
+        return volumenCuadrado;
     }
 }

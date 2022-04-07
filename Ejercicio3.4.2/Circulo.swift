@@ -14,18 +14,18 @@ import Foundation
     var radio:Double!
     var altura:Double!   
     //constructor para calcular el perimetro
-     required init(_ radioPerimetro:Double){
+     required init(radioPerimetro:Double){
         self.radio = radioPerimetro ;
     }
      //constructor para calcular el Area
-     required init (_ RadioArea:Double){
+     required init (RadioArea:Double){
          self.radio = RadioArea
      }
      //constructor para calcular el volumne
-     required init(_ RadioVolumen:Double, _ Altura:Double)
+     required init(RadioVolumen:Double,Altura:Double)
      {
-         self.radio= RadioVolumen
-         self.altur=Altura
+         self.radio = RadioVolumen
+         self.altura = Altura
     }
       //2Pi*radio
     func calcularPerimetro() -> Double {
@@ -40,6 +40,6 @@ import Foundation
     //pi * radio^2 * altura 
     func calcularVolumen() -> Double {
         let volumen = Double.pi * pow(self.radio,2) * self.altura
-        return perimetro;
+        return volumen;
     }
 }

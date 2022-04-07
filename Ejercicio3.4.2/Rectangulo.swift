@@ -15,12 +15,12 @@ class Rectangulo:Figura{
     var altura:Double!
     var alturaVolumen:Double!
     //constructor para inicializar propiedades para calcular el area
-       required init(_ Base:Double, _ Altura:Double){
+       required init(Base:Double,Altura:Double){
         self.altura = Altura;
         self.base = Base;
     }
     //constructor para inicializar propiedades para calcular el perimetro.
-    required init (_ BasePerimetro:Double, _ AlturaPerimetro:Double){
+    required init (BasePerimetro:Double, AlturaPerimetro:Double){
         self.altura=AlturaPerimetro
         self.base=BasePerimetro
     }
@@ -40,7 +40,7 @@ class Rectangulo:Figura{
     }
     func calcularVolumen() -> Double {
     let baseRectangulo = self.base * self.altura
-    let volumenRectangulo = baseRectangulo * self.alturaVolumenRectangulo
+    let volumenRectangulo = baseRectangulo * self.alturaVolumen
         return volumenRectangulo;
     }
     
