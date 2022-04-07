@@ -18,12 +18,12 @@ public class Triangulo:Figura{
     var lado2:Double!
     var lado3:Double!
     
-    //constructor
+    //constructor para inicializar propiedades para el area
     required init(_ Base:Double, _ Altura:Double){
         self.altura = Altura;
         self.base = Base;
     }
-    
+    //constructor para inicializar propiedades para el perimetro
     required init(_ Lado1:Double, _ Lado2:Double, _ Lado3:Double){
         self.lado1 = Lado1
         self.lado2 = Lado2
