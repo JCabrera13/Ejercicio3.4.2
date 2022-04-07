@@ -11,40 +11,33 @@ class Cuadrado:Figura{
     //propiedades del circulo para poder sacar su area, perimetro y volumen.
     //lado^2
     var lado:Double!
-
-    var lado1:Double!
-    var lado2:Double!
-    var lado3:Double!
-    var lado4:Double!
-    //constructor
-     required init(_ Lado:Double){
-        self.lado=Lado;
+    var alturaVolumen:Double!
+    //constructor perimetro
+    required init(_ ladoPerimetro:Double){
+        self.lado=ladoPerimetro;
     }
-    required init(_ Lado1:Double){
-        self.lado1 = Lado1
-        self.lado2 = Lado1
-        self.lado3 = Lado1
-        self.lado4 = Lado1
+    //constructor area
+    required init(_ ladoArea:Double){
+        self.lado = ladoArea
     }
     //falta constructor para inicializar propiedades de volumen
-    required init(){
-
+    required init(_ ladoVolumen:Double, _ AlturaVolumen:Double){
+        self.lado = ladoVolumen
+        self.alturaVolumen = AlturaVolumen
     }
-
     //lado^2
      func calcularArea() -> Double {
-        let calcularAreaCuadrado = pow(2,self.lado);
+        let calcularAreaCuadrado = pow(self.lado,2);
         return calcularAreaCuadrado;
     }
     //4*lado
     func calcularPerimetro() -> Double {
-        let perimtro = self.lado1+self.lado2+self.lado3+self.lado4;
+        let perimtro = 4 * self.lado
         return perimtro;
-
     }
     func calcularVolumen() -> Double {
-        let calcularAreaCuadrado = pow(2,self.lado);
-        return calcularAreaCuadrado;
+        let baseVolumenCuadrado = pow(self.lado,2)
+        let volumenCuadrado = self.alturaVolumen * baseVolumenCuadrado
+        return volumenCuadradp;
     }
-    
 }

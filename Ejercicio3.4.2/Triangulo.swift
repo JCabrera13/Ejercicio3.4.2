@@ -12,26 +12,27 @@ public class Triangulo:Figura{
     //base x altura / 2
     var base:Double!
     var altura:Double!
-    
     //propiedades perimetro.
     var lado1:Double!
     var lado2:Double!
-    var lado3:Double!
-    
+    //propiedades volumen
+    var alturaVolumen:Double!
     //constructor para inicializar propiedades para el area
-    required init(_ Base:Double, _ Altura:Double){
+    required init(_ baseArea:Double, _ alturaArea:Double){
         self.altura = Altura;
         self.base = Base;
     }
     //constructor para inicializar propiedades para el perimetro
-    required init(_ Lado1:Double, _ Lado2:Double, _ Lado3:Double){
-        self.lado1 = Lado1
-        self.lado2 = Lado2
-        self.lado3 = Lado3
+    required init(_ basePerimetro:Double, _ lado1Perimetro:Double, _ lado2Perimetro:Double){
+        self.base = basePerimetro
+        self.lado1 = lado1Perimetro
+        self.lado2 = lado2Perimetro
     }
-    //volumne dejar pendiente.
-    required init(){
-        
+    //volumen.
+      init(base: Double, alturaVolumenTriangulo: Double, alturaVolumen: Double) {
+        self.base = base
+        self.altura = alturaVolumenTriangulo
+        self.alturaVolumen = alturaVolumen
     }
     //base x altura /2
     func calcularArea() -> Double {
@@ -40,12 +41,12 @@ public class Triangulo:Figura{
     }
     //lado1+lado2+lado3
     func calcularPerimetro() -> Double {
-        let resultadoPerimetro = self.lado1 + self.lado2 + self.lado3;
+        let resultadoPerimetro = self.lado1 + self.lado2 + self.base;
         return resultadoPerimetro;
     }
     func calcularVolumen() -> Double {
-        let resultadoPerimetro = self.lado1 + self.lado2 + self.lado3;
-        return resultadoPerimetro;
+        let baseTriangulo = (self.base * self.altura)/2
+        let volumen = baseTriangulo * alturaVolumen
+        return volumen;
     }
-    
 }

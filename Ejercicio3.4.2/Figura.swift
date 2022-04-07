@@ -8,9 +8,7 @@
 import Foundation
 
 protocol Figura{
-    
-    init()
-    
+        
     func calcularArea() -> Double
     
     func calcularPerimetro() -> Double

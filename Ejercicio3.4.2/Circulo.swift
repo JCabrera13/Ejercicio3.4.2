@@ -12,56 +12,34 @@ import Foundation
     //pi, radio
     //formula:pi*radio(^2)
     var radio:Double!
-    var pi:Double!
-    
-    var dblPi: Double {
-        get {
-            return (3.14)
-        }
+    var altura:Double!   
+    //constructor para calcular el perimetro
+     required init(_ radioPerimetro:Double){
+        self.radio = radioPerimetro ;
     }
-    
-    //constructor para calcular el area
-     required init(_ Pi:Double, _ Radio:Double){
-        self.radio = Radio ;
-        self.pi = dblPi;
-    }
-     //constructor para calcular el perimetro
-     required init (_ Radio:Double){
-         self.radio = Radio
+     //constructor para calcular el Area
+     required init (_ RadioArea:Double){
+         self.radio = RadioArea
      }
-     
      //constructor para calcular el volumne
-     required init()
+     required init(_ RadioVolumen:Double, _ Altura:Double)
      {
-         
-     }
-    
-    //constructor para inicializar propiedades para calcular el perimetro.
-    
-    /* override init(_ Radio:Double, _ Pi:Double){
-        self.radio=Radio
-        self.pi=Pi
-    } */
-    //constructor para inicializar las propiedades para calcular el volumen.
-    /* override init(){
-        self.radio = dblRadio;
-        self.pi = dblPi;
-    } */
-    //metodos sobreescritos provenientes de Figura.
+         self.radio= RadioVolumen
+         self.altur=Altura
+    }
+      //2Pi*radio
+    func calcularPerimetro() -> Double {
+        let perimetro = (2*Double.pi)*self.radio
+        return perimetro;
+    }
     //pi*radio^2
     func calcularArea() -> Double {
-        let calcularAreaCirculo = self.pi*pow(2.0,self.dblPi);
+        let calcularAreaCirculo = Double.pi * pow(self.radio,2);
         return calcularAreaCirculo;
     }
-    //2Pi*radio
-    func calcularPerimetro() -> Double {
-        let perimetro = (2*self.dblPi)*self.radio
-        return perimetro;
-    }
-    //
+    //pi * radio^2 * altura 
     func calcularVolumen() -> Double {
-        let perimetro = (2*self.dblPi)*self.radio
+        let volumen = Double.pi * pow(self.radio,2) * self.altura
         return perimetro;
     }
-    
 }
