@@ -25,7 +25,7 @@ class Rectangulo:Figura{
         self.base=BasePerimetro
     }
     //constructor para inicializar propiedades para calcular el volumen
-    required init(_ baseVolumen:Double, _ alturaVolumen:Double, _ alturaVolumenRectangulo:Double){
+    required init(baseVolumen:Double, alturaVolumen:Double, alturaVolumenRectangulo:Double){
         self.base = baseVolumen;
         self.altura = alturaVolumen;
         self.alturaVolumen = alturaVolumenRectangulo

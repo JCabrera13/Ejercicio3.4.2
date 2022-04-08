@@ -215,7 +215,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 let baseMenor = Double(alerta.textFields![1].text!)
                 let lados = Double(alerta.textFields![2].text!)
                 let trapecio = Trapecio(baseMayorPerimetro: baseMayor!, baseMenorPerimetro: baseMenor!, Lado1: lados!)
-                self.entradaValores.text = "Lado: \(trapecio.lado1!)"
+                self.entradaValores.text = "Lados: \(trapecio.lado1!), \nBase Mayor: \(trapecio.baseMayor!), \nBase Menor: \(trapecio.baseMenor!)"
                 self.lblResultadoAPV.text = "Perimetro: \(trapecio.calcularPerimetro())"
             default:
                 self.lblResultado.text = "Error al calcular el perimetro"
@@ -226,5 +226,113 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.present(alerta, animated: true, completion: nil)
     }
     
+    
+    @IBAction func batBtnCalcularVolumen(_ sender: UIBarButtonItem) {
+        let figuraSeleccionada =  "\(figuras[pkvFiguras.selectedRow(inComponent: 0)])"
+        let alerta = UIAlertController(title: "Volumen", message: "Ingrese los datos", preferredStyle: .alert)
+        
+        switch figuraSeleccionada{
+        case "Circulo":
+            alerta.addTextField{
+                (txtRadio) in txtRadio.placeholder = "Radio"
+            }
+            alerta.addTextField{
+                (txtAltura) in txtAltura.placeholder = "Altura"
+            }
+        case "Triangulo":
+            alerta.addTextField{
+                (txtBase) in txtBase.placeholder = "Base"
+            }
+            alerta.addTextField{
+                (txtAltura) in txtAltura.placeholder = "Altura"
+            }
+            alerta.addTextField{
+                (txtAlturaV) in
+                txtAlturaV.placeholder = "Altura Volumen"
+            }
+        case "Cuadrado":
+            alerta.addTextField{
+                (txtLado) in txtLado.placeholder = "Lado"
+            }
+            alerta.addTextField{
+                (txtAlturaV) in
+                txtAlturaV.placeholder = "Altura Volumen"
+            }
+        case "Rectangulo":
+            alerta.addTextField{
+                (txtBase) in
+                txtBase.placeholder = "Base"
+            }
+            alerta.addTextField{
+                (txtAltura) in txtAltura.placeholder = "Altura"
+            }
+            alerta.addTextField{
+                (txtAlturaV) in
+                txtAlturaV.placeholder = "Altura Volumen"
+            }
+        case "Trapecio":
+            alerta.addTextField{
+                (txtBaseMayor) in txtBaseMayor.placeholder = "Base mayor"
+            }
+            alerta.addTextField{
+                (txtBaseMenor) in txtBaseMenor.placeholder = "Base menor"
+            }
+            alerta.addTextField{
+                (txtAlturaV) in
+                txtAlturaV.placeholder = "Altura volumen"
+            }
+            alerta.addTextField{
+                (txtLargo) in
+                txtLargo.placeholder = "Largo Volumen"
+            }
+        default:
+            self.lblResultado.text = "Figura invalida"
+        }
+        let btnCancelar = UIAlertAction(title: "Cancelar", style: .cancel)
+        let btnCalcular = UIAlertAction(title: "Calcular", style: .default, handler: {
+            _ in
+            switch figuraSeleccionada{
+            case "Circulo":
+                let radio = Double (alerta.textFields![0].text!)
+                let altura = Double (alerta.textFields![1].text!)
+                let circulo = Circulo(RadioVolumen: radio!, Altura: altura!)
+                self.entradaValores.text = "Radio: \(circulo.radio!)"
+                self.lblResultadoAPV.text = "Volumen \(circulo.calcularVolumen())"
+            case "Triangulo":
+                let base = Double(alerta.textFields![0].text!)
+                let altura = Double (alerta.textFields![1].text!)
+                let alturaV = Double(alerta.textFields![2].text!)
+                let triangulo = Triangulo(base: base!, alturaVolumenTriangulo: altura!, alturaVolumen: alturaV!)
+                self.entradaValores.text = "Base \(triangulo.base!), altura: \(triangulo.altura!), altura volumen: \(triangulo.alturaVolumen!)"
+                self.lblResultadoAPV.text = "Volumen \(triangulo.calcularVolumen())"
+            case "Cuadrado":
+                let lado = Double (alerta.textFields![0].text!)
+                let altura = Double (alerta.textFields![1].text!)
+                let cuadrado = Cuadrado(ladoVolumen: lado!, AlturaVolumen: altura!)
+                self.entradaValores.text = "Lado: \(cuadrado.lado!), Altura Volumen: \(cuadrado.alturaVolumen!)"
+                self.lblResultadoAPV.text = "Volumen \(cuadrado.calcularVolumen())"
+            case "Rectangulo":
+                let base = Double (alerta.textFields![0].text!)
+                let altura = Double(alerta.textFields![1].text!)
+                let alturaV = Double(alerta.textFields![2].text!)
+                let rectangulo = Rectangulo(baseVolumen: base!, alturaVolumen: altura!, alturaVolumenRectangulo: alturaV!)
+                self.entradaValores.text = "Base: \(rectangulo.base!), Altura: \(rectangulo.altura!), Altura Volumen: \(rectangulo.alturaVolumen!)"
+                self.lblResultadoAPV.text = "Volumen: \(rectangulo.calcularVolumen())"
+            case "Trapecio":
+                let baseMayor = Double (alerta.textFields![0].text!)
+                let baseMenor = Double(alerta.textFields![1].text!)
+                let alturaV = Double(alerta.textFields![2].text!)
+                let largoV = Double(alerta.textFields![3].text!)
+                let trapecio = Trapecio(BaseMayorV: baseMayor!, BaseMenorV: baseMenor!, AlturaV: alturaV!, LargoV: largoV!)
+                self.entradaValores.text = "Base mayor: \(trapecio.baseMayor!),\nBase menor: \(trapecio.baseMenor!),\naltura: \(trapecio.altura!), \nlargo: \(trapecio.largo!)"
+                self.lblResultadoAPV.text = "Volumen: \(trapecio.calcularVolumen())"
+            default:
+                self.lblResultado.text = "Error al calcular el perimetro"
+            }
+        })
+        alerta.addAction(btnCancelar)
+        alerta.addAction(btnCalcular)
+        self.present(alerta, animated: true, completion: nil)
+    }
 }
 

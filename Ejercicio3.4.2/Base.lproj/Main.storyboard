@@ -64,7 +64,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="QPK-FA-XRv"/>
-                                    <barButtonItem title="Volumen" id="JgF-ZZ-1Ax"/>
+                                    <barButtonItem title="Volumen" id="JgF-ZZ-1Ax">
+                                        <connections>
+                                            <action selector="batBtnCalcularVolumen:" destination="BYZ-38-t0r" id="uOj-ZT-ihQ"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resultado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aya-Pj-I1T">

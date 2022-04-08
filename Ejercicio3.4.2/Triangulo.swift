@@ -45,7 +45,7 @@ public class Triangulo:Figura{
         return resultadoPerimetro;
     }
     func calcularVolumen() -> Double {
-        let baseTriangulo = (self.base * self.altura)/2
+        let baseTriangulo = (self.base * self.altura) / 2
         let volumen = baseTriangulo * alturaVolumen
         return volumen;
     }

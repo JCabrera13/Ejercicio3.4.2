@@ -21,7 +21,7 @@ class Cuadrado:Figura{
         self.lado = ladoArea
     }
     //falta constructor para inicializar propiedades de volumen
-    required init(_ ladoVolumen:Double, _ AlturaVolumen:Double){
+    required init(ladoVolumen:Double,AlturaVolumen:Double){
         self.lado = ladoVolumen
         self.alturaVolumen = AlturaVolumen
     }
